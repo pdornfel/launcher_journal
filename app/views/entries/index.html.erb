@@ -1,14 +1,20 @@
 <h1>Listing Entries</h1>
 
-<table>
+<table border='5'>
   <thead>
-    <tr>
+    <tr class='heading'>
       <th>Title</th>
       <th>Description</th>
     </tr>
   </thead>
 
   <tbody>
-      <%=  %>
+      <%= render partial: "entry", collection: @entries %>
   </tbody>
 </table>
+
+<br>
+
+
+
+
