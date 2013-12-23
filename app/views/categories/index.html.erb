@@ -1,0 +1,21 @@
+<h1>Listing Categories</h1>
+
+<table border='5'>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Created at</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <%= render partial: "category", collection: @categories %>
+  </tbody>
+</table>
+<br>
+<%= link_to "New Category", new_category_path %>
+<br>
+<br>
+<%= link_to "Back", entries_path %>
+
+<br>

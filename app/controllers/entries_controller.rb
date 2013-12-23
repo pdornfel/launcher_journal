@@ -4,10 +4,6 @@ class EntriesController < ApplicationController
     @entries = Entry.all
   end
 
-  def show
-    redirect_to :entries
-  end
-
   def new
     @entry = Entry.new
   end
@@ -22,7 +18,7 @@ class EntriesController < ApplicationController
   end
 
   def event_params
-      params.require(:entry).permit(:title, :description)
+      params.require(:entry).permit(:title, :description, :category_id)
   end
 
   def destroy

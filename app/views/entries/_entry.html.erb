@@ -1,5 +1,12 @@
 <tr class='heading'>
   <td><%= entry.title %></td>
   <td><%= entry.description %></td>
-  <td><%= link_to 'destroy', entry, method: :delete %></td>
+  <td>
+  <% if entry.category %>
+  <%= entry.category.name %>
+  <% end %>
+  </td>
+  <td><%= link_to 'Get rid of this', entry, method: :delete %></td>
 </tr>
+
+
