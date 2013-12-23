@@ -40,6 +40,11 @@ group :development, :test do
   gem 'pry-rails'
 end
 
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails'
+
+gem 'quiet_assets'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

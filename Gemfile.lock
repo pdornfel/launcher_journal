@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/anjlab/bootstrap-rails.git
+  revision: 461121444e24cdf78357418bfca9f2b8a9a1c518
+  specs:
+    anjlab-bootstrap-rails (3.0.3.0)
+      railties (>= 3.0)
+      sass (>= 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,6 +76,8 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    quiet_assets (1.0.2)
+      railties (>= 3.1, < 5.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -141,12 +151,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  anjlab-bootstrap-rails!
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   jbuilder (~> 1.2)
   jquery-rails
   pg
   pry-rails
+  quiet_assets
   rails (= 4.0.2)
   rspec-rails
   sass-rails (~> 4.0.0)

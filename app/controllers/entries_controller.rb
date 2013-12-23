@@ -1,7 +1,11 @@
-class EntriesController < ActionController::Base
+class EntriesController < ApplicationController
 
   def index
     @entries = Entry.all
+  end
+
+  def show
+    redirect_to :entries
   end
 
   def new
@@ -20,5 +24,11 @@ class EntriesController < ActionController::Base
   def event_params
       params.require(:entry).permit(:title, :description)
   end
+
+  def destroy
+    Entry.find(params[:id]).destroy
+    redirect_to entries_path
+  end
+
 
 end
