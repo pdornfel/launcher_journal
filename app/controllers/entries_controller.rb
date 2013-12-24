@@ -9,14 +9,15 @@ class EntriesController < ApplicationController
   end
 
   def create
-    @entry = Entry.new(event_params)
-
-    respond_to do |format|
-      @entry.save
-      format.html { redirect_to :entries }
-    end
+    @entry = Entry.create(event_params)
+      redirect_to :entries
   end
 
+  def show
+    @entry = Entry.find(params[:id])
+  end
+
+private
   def event_params
       params.require(:entry).permit(:title, :description, :category_id)
   end
