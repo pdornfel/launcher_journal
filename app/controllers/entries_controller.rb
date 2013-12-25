@@ -17,15 +17,14 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params[:id])
   end
 
-private
-  def event_params
-      params.require(:entry).permit(:title, :description, :category_id)
-  end
-
   def destroy
     Entry.find(params[:id]).destroy
     redirect_to entries_path
   end
 
+private
+  def event_params
+      params.require(:entry).permit(:title, :description, :category_id)
+  end
 
 end

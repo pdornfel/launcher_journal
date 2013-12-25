@@ -1,13 +1,13 @@
 <tr>
   <td><%= entry.title %></td>
   <td><%= entry.description %></td>
+  <td><%= entry.created_at.strftime("%I:%M %p %b %d") %></td>
   <td>
   <% if entry.category %>
   <%= entry.category.name %>
   <% end %>
-  </td>
-  <td><%= link_to 'Show', entry, method: :get %></td>
-  <td><%= link_to 'Get rid of this', entry, method: :delete %></td>
+  <td><%= link_to 'Show', entry, method: :get %>
+  <%= link_to 'Delete', entry, method: :delete %></td>
 </tr>
 
 
